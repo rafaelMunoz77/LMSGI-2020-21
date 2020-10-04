@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE arbolesYFrutas SYSTEM "arbolesYFrutas.dtd">
+<arbolesYFrutas>
+	<arbol nombre="Naranjo" tipoHoja="perenne" colorHoja="verde">
+		<fruta>Naranja
+			<epocaRecogida nombre="invierno"/>
+		</fruta>
+		<semilla>Sí</semilla>
+	</arbol>
+	<arbol nombre="Olivo" tipoHoja="perenne">
+		<fruta>Aceituna &flores;
+			<epocaRecogida nombre="invierno"/>
+		</fruta>
+	</arbol>
+	<agricultor nombre="Rafa"/>
+	<agricultor nombre="Carmen"/>
+	<zona agricultorResponsable="Rafa">Norte</zona>
+	<trabajo agricultores="Rafa Carmen"/>
+</arbolesYFrutas>

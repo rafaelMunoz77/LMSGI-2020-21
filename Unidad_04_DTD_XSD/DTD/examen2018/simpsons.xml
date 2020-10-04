@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE springfield SYSTEM "simpsons.dtd">
+<springfield estado="Utah">
+    <adultos>
+        <adulto nombre="Homer" colorPelo="Moreno" casadoCon="Marge" parentesco="Bart Lisa"/>
+        <adulto nombre="Marge" colorPelo="Azul"/>
+    </adultos>
+    <ninios>
+        <ninio nombre="Bart" colorPelo="Amarillo"/>
+        <ninio nombre="Lisa" colorPelo="Amarillo" parentesco="Bart Marge Homer"/>
+    </ninios>
+    <temporadas>LLevamos un año sin nueva temporada de &groening;
+        <temporada numero="1" fechaInicio="15/08/1987"/>
+        <temporada numero="2" fechaInicio="15/03/1989"/>
+    </temporadas>
+</springfield>

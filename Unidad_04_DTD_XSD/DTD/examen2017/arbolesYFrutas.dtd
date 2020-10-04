@@ -1,0 +1,17 @@
+<!ELEMENT arbolesYFrutas (arbol+, agricultor*, zona*, trabajo*)>
+<!ELEMENT arbol (fruta, semilla?)>
+<!ELEMENT fruta (#PCDATA | epocaRecogida)*>
+<!ELEMENT semilla (#PCDATA)>
+<!ENTITY % atributoNombre "nombre CDATA #REQUIRED">
+<!ENTITY flores "Este árbol tiene unas flores muy bonitas">
+<!ATTLIST arbol %atributoNombre;
+				tipoHoja (caduca | perenne) #IMPLIED 
+				colorHoja CDATA #FIXED "verde">
+<!ELEMENT epocaRecogida EMPTY>
+<!ATTLIST epocaRecogida %atributoNombre;>
+<!ELEMENT agricultor EMPTY>
+<!ATTLIST agricultor nombre ID #REQUIRED>
+<!ELEMENT zona (#PCDATA)>
+<!ATTLIST zona agricultorResponsable IDREF #REQUIRED>
+<!ELEMENT trabajo EMPTY>
+<!ATTLIST trabajo agricultores IDREFS #REQUIRED>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE marvel [
+  <!ELEMENT marvel (superheroe*, villano*, superpoder*)>
+  <!ELEMENT superheroe EMPTY>
+  <!ATTLIST superheroe nombre CDATA #REQUIRED>
+  <!ATTLIST superheroe identificador ID #REQUIRED>
+  <!ELEMENT villano EMPTY>  
+  <!ATTLIST villano identificador ID #REQUIRED>
+  <!ELEMENT superpoder (#PCDATA)>
+  <!ATTLIST superpoder pertenece_a IDREF #REQUIRED>
+]>
+<marvel> 
+  <superheroe nombre="Thor" identificador="a1"/>
+  <superheroe nombre="Hulk" identificador="a2"/>
+  <superheroe nombre="Iron Man" identificador="a3"/>
+  <villano identificador="a"/>
+  <superpoder pertenece_a="a1">Martillo prodigioso</superpoder>
+  <superpoder pertenece_a="a1">Dios del trueno</superpoder>
+  <superpoder pertenece_a="a1">Resistencia</superpoder>
+  <superpoder pertenece_a="a2">Fuerza</superpoder>
+  <superpoder pertenece_a="a2">Indestructible</superpoder>
+  <superpoder pertenece_a="a3">Armadura con poderes</superpoder>
+</marvel>

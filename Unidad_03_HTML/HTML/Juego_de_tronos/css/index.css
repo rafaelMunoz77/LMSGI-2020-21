@@ -1,0 +1,42 @@
+#divPrincipal {
+    width: 90%;
+    margin: 0 auto;
+}
+
+#banner {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    text-align: center;
+}
+
+#otroDiv {
+    width: 200px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contenedorTarjetas {
+    margin-top: 30px;
+    width: 100%;
+    padding: 0px;
+}
+
+.tarjeta {
+    border: 1px solid #000000;
+    padding: 1%;
+    display: inline-block;
+}
+
+.tarjetaUnTercio {
+    width: 30%;
+}
+
+.tarjetaUnCuarto {
+    width: 22%;
+}
+
+.imagenAnchoCompleto {
+    width: 100%;
+}
