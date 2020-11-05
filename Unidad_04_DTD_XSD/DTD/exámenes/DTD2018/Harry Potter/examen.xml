@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE harryPotter SYSTEM "examen.dtd">
+<harryPotter edad="infantil">&harry;
+	<casa nombre="Griffyndor">
+		<personaje nombre="Ron" edad="infantil" estado="vivo"/>
+	</casa>
+</harryPotter>
