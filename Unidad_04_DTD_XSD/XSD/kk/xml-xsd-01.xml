@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<departamentos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="xml-xsd-01.xsd">
+  <departamento nombre="Informática"> Tiene 17 profesores
+    <jefaturaDpto>Miguel Ángel León</jefaturaDpto>
+    <miembro nombre="Rafa"/>
+  </departamento>
+
+</departamentos>
