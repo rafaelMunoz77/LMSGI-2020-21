@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="alumno" type="tipoAlumno"/>
+
+    <xs:complexType name="tipoAlumno">
+        <xs:all>
+            <xs:element name="nombre" type="minimoUnCaracter"/>
+            <xs:element name="direccion" type="tipoDireccion"/>
+            <xs:element name="telefono" type="tipoTelefono"/>
+        </xs:all>
+        <xs:attribute name="dni" type="tipoDNI"/>
+    </xs:complexType>
+
+
+    <xs:complexType name="tipoDireccion">
+        <xs:sequence>
+            <xs:element name="calle" type="minimoUnCaracter"/>
+            <xs:element name="numero" type="xs:string"/>
+            <xs:element name="ciudad" type="minimoUnCaracter"/>
+            <xs:element name="provincia" type="minimoUnCaracter"/>
+        </xs:sequence>
+    </xs:complexType>
+
+
+    <xs:simpleType name="minimoUnCaracter">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipoTelefono">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]{9}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipoDNI">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d{8}([A-Z]|[a-z])"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
