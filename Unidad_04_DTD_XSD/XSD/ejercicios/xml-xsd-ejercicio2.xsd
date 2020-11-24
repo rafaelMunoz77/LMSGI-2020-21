@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="vehiculos">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="vehiculo" type="tipoVehiculo"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="tipoVehiculo">
+        <xs:all>
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="modelo" type="tipoMinimoDosPalabras"/>
+            <xs:element name="fabricacion" type="tipoFabricacion"/>
+            <xs:element name="modificaciones" type="tipoModificaciones"/>
+        </xs:all>
+    </xs:complexType>
+
+    <xs:complexType name="tipoFabricacion">
+        <xs:all>
+            <xs:element name="inicio" type="tipoFecha"/>
+            <xs:element name="fin" type="tipoFecha"/>
+        </xs:all>
+    </xs:complexType>
+
+    <xs:complexType name="tipoFecha">
+        <xs:all>
+            <xs:element name="dia" type="xs:string"/>
+            <xs:element name="mes" type="tipoMeses"/>
+            <xs:element name="anyo" type="xs:string"/>
+        </xs:all>
+    </xs:complexType>
+
+    <xs:complexType name="tipoModificaciones">
+        <xs:sequence>
+            <xs:element name="modificacion" type="xs:string" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="tipoMeses">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="January"/>
+            <xs:enumeration value="February"/>
+            <xs:enumeration value="March"/>
+            <xs:enumeration value="April"/>
+            <xs:enumeration value="May"/>
+            <xs:enumeration value="June"/>
+            <xs:enumeration value="July"/>
+            <xs:enumeration value="August"/>
+            <xs:enumeration value="September"/>
+            <xs:enumeration value="October"/>
+            <xs:enumeration value="November"/>
+            <xs:enumeration value="December"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipoMinimoDosPalabras">
+        <xs:restriction base="xs:string">
+            <xs:pattern value=".+ .+"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
