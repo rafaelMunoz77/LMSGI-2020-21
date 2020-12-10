@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="superheroe" type="tipoSuperheroe"/>
+
+  <xs:complexType name="tipoSuperheroe">
+    <xs:sequence>
+      <xs:element name="peso" type="tipoPeso"/>
+      <xs:element name="longitud" type="tipoLongitud"/>
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <xs:complexType name="tipoLongitud">
+    <xs:simpleContent>
+      <xs:extension base="numeroDe1A800">
+        <xs:attribute name="unidadMedida" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+
+  <xs:complexType name="tipoPeso" mixed="true">
+    <xs:simpleContent>
+      <xs:extension base="numeroDe1A200">
+        <xs:attribute name="unidadMedida" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="superheroeDerivado"  mixed="true">
+    <xs:complexContent>
+      <xs:extension base="tipoPeso">
+        <xs:sequence>
+          <xs:element name="poderPrincipal" type="xs:string" />
+        </xs:sequence>
+        <xs:attribute name="edad" type="xs:string"/>
+        <xs:attribute name="color" type="xs:string"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>  
+
+
+
+  <xs:simpleType name="numeroDe1A800">
+    <xs:restriction base="xs:positiveInteger">
+      <xs:minInclusive value="1" />
+      <xs:maxInclusive value="800"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+
+  <xs:simpleType name="numeroDe1A200">
+    <xs:restriction base="numeroDe1A800">
+      <xs:maxInclusive value="200"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

@@ -2,12 +2,6 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="superheroe" type="mixtoConValidacion"/>
 
-  <xs:complexType mixed="true" name="mixtoSinValidacion">
-    <xs:attribute name="nombre" type="xs:string"/>
-    <xs:attribute name="edad" type="xs:string"/>
-  </xs:complexType>
-
-
   <xs:complexType name="mixtoConValidacion">
     <xs:simpleContent>
       <xs:extension base="minimo4Caracteres">
