@@ -1,11 +1,19 @@
 body {
     background: white;
+    font-family: 'Lato', sans-serif;
+}
+
+.anchoContenedorPrincipal {
+    width: 90%;
+}
+
+.centrarDiv {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #divPrincipal {
     background: turquoise;
-    width: 90%;
-    margin: 0 auto;
     vertical-align: top;
 }
 
@@ -49,4 +57,29 @@ body {
 
 .tarjeta .descripcion span {
     vertical-align: middle;
+}
+
+#menu {
+    background: black;
+    text-align: center;
+}
+
+#menu li{
+    display: inline-block;
+    color: white;
+    width: 100px;
+}
+
+#menu li:hover {
+    background: #757575;
+}
+
+#menu a {
+    color: yellow;
+    text-decoration: underline;
+}
+
+#menu a:visited {
+    color: yellow;
+    text-decoration: underline;
 }
