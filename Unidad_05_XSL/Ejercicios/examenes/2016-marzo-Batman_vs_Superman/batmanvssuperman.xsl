@@ -68,9 +68,7 @@
 
         <table border="1" width="50%" align="center">
           <xsl:call-template name="bucleForFila">
-            <xsl:with-param name="i">
-              1
-            </xsl:with-param>
+            <xsl:with-param name="i">1</xsl:with-param>
           </xsl:call-template>
         </table>
       </td>
@@ -82,17 +80,11 @@
     <xsl:if test="$i &lt;= 4">
       <tr>
         <xsl:call-template name="bucleForColumna">
-          <xsl:with-param name="i">
-            <xsl:value-of select="$i" />
-          </xsl:with-param>
-          <xsl:with-param name="j">
-            1
-          </xsl:with-param>
+          <xsl:with-param name="i"><xsl:value-of select="$i" /></xsl:with-param>
+          <xsl:with-param name="j">1</xsl:with-param>
         </xsl:call-template>
         <xsl:call-template name="bucleForFila">
-          <xsl:with-param name="i">
-            <xsl:value-of select="$i + 1" />
-          </xsl:with-param>
+          <xsl:with-param name="i"><xsl:value-of select="$i + 1" /></xsl:with-param>
         </xsl:call-template>
       </tr>
     </xsl:if>
@@ -104,43 +96,30 @@
     <xsl:param name="j" />
     <xsl:if test="$j &lt;= 4">
       <xsl:call-template name="celda">
-        <xsl:with-param name="x">
-          <xsl:value-of select="$j" />
-        </xsl:with-param>
-        <xsl:with-param name="y">
-          <xsl:value-of select="$i" />
-        </xsl:with-param>
+        <xsl:with-param name="x"><xsl:value-of select="$j" /></xsl:with-param>
+        <xsl:with-param name="y"><xsl:value-of select="$i" /></xsl:with-param>
       </xsl:call-template>
       <xsl:call-template name="bucleForColumna">
-        <xsl:with-param name="i">
-          <xsl:value-of select="$i" />
-        </xsl:with-param>
-        <xsl:with-param name="j">
-          <xsl:value-of select="$j + 1" />
-        </xsl:with-param>
+        <xsl:with-param name="i"><xsl:value-of select="$i" /></xsl:with-param>
+        <xsl:with-param name="j"><xsl:value-of select="$j + 1" /></xsl:with-param>
       </xsl:call-template>
     </xsl:if>
   </xsl:template>
 
 
-  <xsl:template name="celda" match="ocupado">
+  <xsl:template name="celda">
     <xsl:param name="x" />
     <xsl:param name="y" />
     <td align="center">
-      x: <xsl:value-of select="$x"/> - y <xsl:value-of select="$y"/>
-      <xsl:for-each select="ocupado">
-        <p>fila: <xsl:value-of select="@fila"/> - asiento: <xsl:value-of select="@asiento"/></p>  
-      </xsl:for-each>
-<!--      <xsl:choose>
-        <xsl:when
-					test="ocupado[@fila=$y and @asiento=$x]">
+      <xsl:choose>
+        <xsl:when test="ocupado[@fila=$y and @asiento=$x]">
           <img src="{/cine/imagenes/imagen[@id='ocupado']}" />
         </xsl:when>
         <xsl:otherwise>
           <img src="{/cine/imagenes/imagen[@id='libre']}" />
         </xsl:otherwise>
       </xsl:choose>
--->    </td>
+    </td>
   </xsl:template>
 
 
